@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<title>Min nya webbsida</title>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/lib/css/style.min.css">
+
+</head>
+<body ng-app="app">
+	<div class="map-wrap">
+		<div id="map"></div>
+	</div>
+
+	<div class="add-pin add-toggle"><button><img src="/lib/img/add_button.png" width="40" alt="Lägg till event"></button></div>
+
+	<div class="container">
+		<div class="information left-side">
+			<h3>Vad är Allt Om Ovanåker?</h3>
+			<p>
+				Här kan du som besöker Ovanåkers Kommun snabbt och enkelt hitta information om olika
+				aktiviter som finns. 
+			</p>
+			<p>
+				Genom att klicka på en pin på kartan får du upp information om eventet. Vi har även lagt till busshållsplatserna, så att du snabbt och enkelt kan få information kring busstider för de lokala bussarna som går.
+			</p>
+			<p>
+				Har du ett event du vill ska synas här? <a href="#" class="add-toggle">Lägg då till det!</a>
+			</p>
+		</div>
+
+		<div class="side-image">
+			<img src="/lib/img/compass.png" alt="Kompass" height="160">
+		</div>
+	</div>
+
+	<!-- Det gömda formuläret som används för att skriva in information om pin'en -->
+	<div class="overlay-bg">
+		<div class="add-pin-form">
+			<form id="pin-form">
+				<h4>Lägg till pin</h4>
+				<input type="text" name="pin-name" class="pin-name" placeholder="Namn på pin">
+				<input type="text" name="author" placeholder="Ditt namn (frivilligt)">
+				<textarea type="text" name="description" class="pin-description" placeholder="En kort beskrivning"></textarea>
+				<input type="hidden" name="lng" class="input-lng" name="longitude">
+				<input type="hidden" name="lat" class="input-lat" name="latitude">
+				<button class="btn bluebutton submit-pin-form">Placera pin</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Hjälpfunktionalitet för att droppa och slutligen spara en pin -->
+	<div class="show-help">
+		<p>Klicka på kartan för att märka ut platsen!</p>
+		<button class="final-save-button">Spara Pin</button>
+	</div>
+	<div class="help-overlay"></div>
+
+	<!-- jQuery -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Google Maps -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU2C3kXs9KThp4v8PNjm_cR5npN-9cBk4"></script>
+	<script src="lib/js/gMaps.js"></script>
+	<script src="lib/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+@import "assets/bits";
+@import "/bower_components/skeleton/css/normalize.css";
+
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:700,600,500,400,100");
+
+//Skeleton grids
+@import "/bower_components/skeleton/css/skeleton.css";
+//FA
+@import "/bower_components/fontawesome/css/font-awesome.css";
+
+html{ 
+	background: white; min-height: 100%; 
+	font-family: "Roboto", Arial, sans-serif;
+	@include font-size(9px); 
+	 }
+
+
+.map-wrap {
+	height: 570px;
+	overflow: hidden;
+	
+
+#map { height: 600px; width: 100%; z-index: 4; } }
+
+.info-card {
+	padding: 10px 30px;
+	text-align: left;
+
+	h3 { 
+		@include font-size(11);
+		padding: 2px;
+		margin: 0 auto;
+		color: #888888; 
+		}
+
+	p.author {
+		@include font-size(7);
+		margin: 0 auto;
+		font-weight: 400;
+		padding: 0 2px;
+		color: #999999;
+	}
+
+	p.description {
+		@include font-size(8);
+		color: #777777;
+		font-weight: 400;
+		max-width: 340px;
+		padding: 0;
+		margin: 0 auto 8px auto;
+	}
+
+	.tour{
+		font-weight: 400;
+		@include font-size(7);
+		margin-top: 8px;
+		color: #4386F4;
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+
+}
+
+
+
+
+.add-pin {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	z-index: 999;
+	
+	button {
+		color: white;
+		border: none;
+		height: 80px;
+		padding-top: 5px;
+		font-weight: 900;
+
+		img {
+			border-radius: 50%;
+			background: #F55D55;
+			padding: 12px;
+			transition: box-shadow 0.2s ease, transform 0.2s ease-in-out;
+			box-shadow: 0px 0px 2px 1px rgba(0,0,0, 0.3);
+
+			&.rotated { transform: rotate(225deg); }
+
+			&:hover {
+				box-shadow: 1px 1px 3px 2px rgba(0,0,0, 0.3);
+
+			}
+		}
+	}
+}
+
+
+
+.show-help {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 12px 0;
+	background: #6FAACA;
+	text-align: center;
+	color: white;
+	z-index: 5;
+	display: none;
+
+	p { padding: 1px 0; @include font-size(8); margin: 0 auto; display: inline-block; }
+	.final-save-button { display: none; color: white; border-color: white; margin: 0 auto 0 20px; }
+}
+
+.help-overlay {
+	background: rgba(0,0,0, 0.6);
+	position: fixed; top: 0; left: 0;
+	width: 100%; height: 100%;
+	z-index: 2;
+	display: none;
+}
+
+
+
+
+.container {
+	max-width: 90%;
+	margin: 100px auto;
+	width: 960px;
+	text-align: center;
+	z-index: 1;
+
+	.information {
+		margin: 0 auto;
+		display: inline-block;
+		padding: 20px 25px;
+		text-align: left;
+		max-width: 90%;
+		vertical-align: top;
+
+		h3 { color: #555555; @include font-size(15); margin: 10px 0; }
+		p { color: #666666; @include font-size(8); width: 480px; max-width: 90%; margin: 12px 0; }
+		a { text-decoration: none; color: #6FAACA; &:hover { text-decoration: underline; } }
+	}
+
+	.side-image {
+		width: 40%;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: right;
+
+		img {
+			vertical-align: middle;
+			margin: 70px 0 0 auto;
+		}
+	}
+}
+
+
+
+.overlay-bg {
+	background: rgba(0,0,0, 0.6);
+	height: 100%; width: 100%;
+	position: fixed; top: 0; left: 0;
+	display: none;
+	z-index: 10;
+
+	.add-pin-form {
+		padding: 20px 15px;
+		width: 450px;
+		border-radius: 2px;
+		margin: 5% auto 0 auto;
+		max-width: 90%;
+		background: white;
+
+		h4 {
+			color: #555555;
+			width: 90%;
+			margin: 4px auto 20px auto;
+			@include font-size(10);
+		}
+
+		input,textarea {
+			display: block;
+			margin: 8px auto;
+			@include font-size(8);
+			width: 90%;
+		}
+
+		.btn {
+			position: relative;
+			left: 5%;
+		}
+	}
+}
