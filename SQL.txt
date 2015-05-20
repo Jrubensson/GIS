@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.10
+-- http://www.phpmyadmin.net
+--
+-- Värd: localhost:3306
+-- Tid vid skapande: 20 maj 2015 kl 10:51
+-- Serverversion: 5.5.38
+-- PHP-version: 5.6.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Databas: `gis`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellstruktur `locations`
+--
+
+CREATE TABLE `locations` (
+  `lat` float NOT NULL,
+  `lng` float NOT NULL,
+  `name` varchar(60) COLLATE utf8_swedish_ci NOT NULL,
+  `description` text COLLATE utf8_swedish_ci NOT NULL,
+  `author` varchar(100) COLLATE utf8_swedish_ci NOT NULL,
+  `added` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+`ID` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumpning av Data i tabell `locations`
+--
+
+INSERT INTO `locations` (`lat`, `lng`, `name`, `description`, `author`, `added`, `ID`) VALUES
+(61.3593, 15.9736, 'NY Fotbollsplan!', 'Kom och upptäck vår nya fotbollsplan, som vi precis byggt!', 'Johannes Rubensson', '2015-04-17 14:20:55', 1),
+(61.3693, 15.9736, 'Safari Island', 'Detta är en fin fin loppis', 'Johannes Rubensson', '2015-04-17 14:20:55', 2),
+(61.3633, 15.8928, 'Min pin', 'Beskrivning: Hejsan', 'Johannes', '2015-05-15 15:39:23', 3),
+(61.3602, 16.1568, 'min pin', 'Hejsan', '', '2015-05-15 15:41:52', 4),
+(61.348, 15.9985, 'Min pin', 'Här kommer då min lilla fina pin! Jag hoppas ni tycker om den!', 'En okänd filur', '2015-05-15 15:45:05', 5),
+(61.348, 15.9985, 'Min pin', 'Här kommer då min lilla fina pin! Jag hoppas ni tycker om den!', 'En okänd filur', '2015-05-15 15:45:12', 6),
+(61.36, 16.0242, 'test', 'test', 'En okänd filur', '2015-05-15 15:45:37', 7),
+(61.3248, 15.9525, 'en pin', 'hejsan', 'En okänd filur', '2015-05-15 15:47:03', 8),
+(61.3558, 15.9448, 'Min nya pin', 'Här kommer en kort beskrivning bara. Inte så mycket information egentligen, kanske.', 'Johannes', '2015-05-15 15:52:21', 9),
+(61.3521, 15.9194, 'Lägger till', 'Hejsan', 'En okänd filur', '2015-05-15 15:53:24', 10),
+(61.3545, 15.9731, 'test', 'test igen', 'test2', '2015-05-15 15:58:50', 11),
+(61.3599, 15.9944, 'test', 'test', 'En okänd filur', '2015-05-15 16:02:23', 12),
+(61.3744, 15.9497, 'min pin', 'hejsan', 'En okänd filur', '2015-05-15 16:09:35', 13),
+(61.3439, 15.9055, 'map', 'mp', 'En okänd filur', '2015-05-15 16:12:05', 14),
+(61.3514, 15.9848, 'map', 'map', 'En okänd filur', '2015-05-15 16:13:08', 15),
+(61.3664, 15.8993, 'Min pin', 'En beskrivning från min iphone', 'En okänd filur', '2015-05-15 16:19:09', 16),
+(61.3514, 15.9848, 'Min pin', 'En beskrivning från min iphone', 'En okänd filur', '2015-05-15 16:19:10', 17),
+(61.3628, 15.9559, 'Min pin', 'Hejsan', 'En okänd filur', '2015-05-17 07:53:58', 18),
+(61.3614, 15.9288, 'Hejsan', 'Lägger till från skolan', 'Johannes', '2015-05-19 08:04:19', 19);
+
+--
+-- Index för dumpade tabeller
+--
+
+--
+-- Index för tabell `locations`
+--
+ALTER TABLE `locations`
+ ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT för dumpade tabeller
+--
+
+--
+-- AUTO_INCREMENT för tabell `locations`
+--
+ALTER TABLE `locations`
+MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
